@@ -9,23 +9,13 @@ Quick 5 things about me:
 5.
 
 ---
-output: 
-  pdf_document:
-    latex_engine: pdflatex
-    template: ~/Dropbox/miscelanea/svm-r-markdown-templates/svm-latex-cv.tex
-geometry: margin=1in
 
 title: "CV"
-author: William Sealy Gosset
-
-jobtitle: "Chief Brewer, Arthur Guinness & Son"
-address: "Guinness Brewery · Park Royal · London NW10 7RR, UK"
+author: Aida Yamini Tengku 
+jobtitle: "Graduate of Geographical Sciences from University of Queensland "
+address: "Brisbane, Australia"
 fontawesome: yes
-email: guinness@consumer-care.net
 # github: svmiller
-phone: "+353 1 408 4800"
-web: guinness.com
-updated: no
 
 keywords: R Markdown, academic CV, template
 
@@ -51,7 +41,7 @@ University of Queensland <- read_csv("resume/job-titles.csv",
                         )
 )
 
-# Job descriptions
+# Relevant Work Experience 
 job.descriptions <- read_csv("resume/job-descriptions.csv",
                       locale = locale(encoding = 'ISO-8859-1')
 )
@@ -63,7 +53,7 @@ job.descriptions <- read_csv("resume/job-descriptions.csv",
 #>   accomplishments = col_character()
 #> )
 
-# Experience section
+# Relevant Work Experience 
 job.titles %>% 
   left_join(job.descriptions) %>% 
   vitae::detailed_entries(
@@ -78,11 +68,11 @@ job.titles %>%
 #> Observations: 7
 #> Variables: 5
 #> Groups: what, when, with, where [7]
-#> $ what  <chr> "Post-doctoral Research Associate", "Graduate Research A...
-#> $ when  <chr> "2016 - present", "2012 - 2016", "2014 - 2016", "2011 - ...
-#> $ with  <chr> "University of Nebraska-Lincoln", "University of Florida...
-#> $ where <S3: glue> "Lincoln, Nebraska, US", "Gainesville, Florida, US"...
-#> $ why   <list> [<"Developed innovative approach to analyzing repeat-pu...
+#> $ what  <chr> "Geologist Trainee"
+#> $ when  <chr> "July 2016"
+#> $ with  <chr> "G&P Geotechnics Sdn Bhd"
+#> $ where <S3: glue> "Kuala Lumpur, Malaysia"
+#> $ why   <list> [<"Primary on-site representative for soil and core logging for a highway construction project">]
 
 
 
